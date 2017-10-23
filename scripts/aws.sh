@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/usr/bin/env bash
 
 sudo mkdir -p /fastai
 sudo mount /dev/xvdh /fastai
