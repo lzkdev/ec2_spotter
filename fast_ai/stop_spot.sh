@@ -24,3 +24,4 @@ aws ec2 wait instance-terminated --instance-ids $instance_id
 # Clean up
 rm $config_file
 
+echo ec2 instance terminated

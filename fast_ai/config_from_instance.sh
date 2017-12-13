@@ -73,14 +73,20 @@ export region=`aws configure get region`
 # The ami to boot up the spot instance with.
 # Ubuntu-xenial-16.04 in diff regions.
 # Ubuntu 16.04.1 LTS
-if [ $region = "us-west-2" ]; then 
-	export ami=ami-7c803d1c # Oregon
-elif [ $region = "eu-west-1" ]; then 
-	export ami=ami-d8f4deab # Ireland
+if [ $region = "us-west-1" ]; then 
+	export ami=ami-1812bb61 # 加利福尼亚北部
+elif [ $region = "eu-west-2" ]; then 
+	export ami=ami-f1e73689 # 俄勒冈
 elif [ $region = "us-east-1" ]; then
-  	export ami=ami-6edd3078 # Virginia
+  	export ami=ami-405ade3a # 弗吉尼亚北部
 elif [ $region = "us-east-2" ]; then
-  	export ami=ami-f0725c95 # Virginia
+  	export ami=ami-f0725c95 # 俄亥俄州
+elif [ $region = "ap-southeast-2" ]; then
+  	export ami=ami-5603eb34 # 悉尼
+elif [ $region = "ap-northeast-1" ]; then
+  	export ami=ami-329c2b54 # 东京
+elif [ $region = "ap-northeast-2" ]; then
+  	export ami=ami-0ce14662 # 首尔
 fi
 echo 'If you are using Amazon Deep Learning AMI, do not forget to change parameter ec2spotter_preboot_image_id in ../my.conf , otherwise the root swap script will fail!'
 
