@@ -1,13 +1,13 @@
 # Parameters defaults
 # The size of the root volume, in GB.
-volume_size=128
+volume_size=50
 # The name of the key file we'll use to log into the instance. create_vpc.sh sets it to aws-key-fast-ai
 name=fast-ai
 key_name=aws-key-$name
 # Type of instance to launch
 ec2spotter_instance_type=p2.xlarge
 # In USD, the maximum price we are willing to pay.
-bid_price=0.5
+bid_price=0.2
 
 # Read the input args
 while [[ $# -gt 0 ]]

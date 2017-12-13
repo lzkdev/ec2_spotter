@@ -19,6 +19,11 @@ aws ec2 wait instance-running --instance-ids $instance_id
 
 echo Spot instance ID: $instance_id 
 
+cat > spotinfo.tmp <<EOL
+$request_id
+$instance_id
+EOL
+
 echo 'Please allow the root volume swap script a few minutes to finish.'
 if [ "x$ec2spotter_elastic_ip" = "x" ]
 then

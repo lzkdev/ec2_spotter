@@ -1,7 +1,7 @@
 # settings
 export name="fast-ai"
 export keyName="aws-key-$name"
-export maxPricePerHour=0.5
+export maxPricePerHour=0.2
 
 # Set current dir to working dir - http://stackoverflow.com/a/10348989/277871
 cd "$(dirname ${BASH_SOURCE[0]})"
@@ -79,6 +79,8 @@ elif [ $region = "eu-west-1" ]; then
 	export ami=ami-d8f4deab # Ireland
 elif [ $region = "us-east-1" ]; then
   	export ami=ami-6edd3078 # Virginia
+elif [ $region = "us-east-2" ]; then
+  	export ami=ami-f0725c95 # Virginia
 fi
 echo 'If you are using Amazon Deep Learning AMI, do not forget to change parameter ec2spotter_preboot_image_id in ../my.conf , otherwise the root swap script will fail!'
 
