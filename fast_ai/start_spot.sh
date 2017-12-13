@@ -37,5 +37,5 @@ fi
 export name=fast-ai
 if [ "$ec2spotter_key_name" = "aws-key-$name" ] 
 then
-	echo Then connect to your instance: ssh -i ~/.ssh/aws-key-$name.pem ubuntu@$ip
+	echo Then connect to your instance: ssh -L localhost:8888:localhost:8888 -i ~/.ssh/aws-key-$name.pem ubuntu@$ip
 fi
